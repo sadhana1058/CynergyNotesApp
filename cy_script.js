@@ -27,7 +27,8 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-const BASE_URL ='https://notes-web-app-by-sadhana.herokuapp.com/posts';
+// const BASE_URL ='https://notes-web-app-by-sadhana.herokuapp.com/posts';
+const BASE_URL ='http://localhost:3000/posts';
 //const allnotes = res.data;
 
 
@@ -41,7 +42,7 @@ const getallNotes = async (res,data)=> {
     console.log(`GET: Here's the list of posts`, allposts);
     var l=allposts.length;
     console.log(l);
-    for (var i=0;i<l;i++){
+    for (var i=l-1;i>=0;i--){
 
       var a=allposts[i]["title"];
       var b=allposts[i]["description"];
@@ -101,6 +102,8 @@ const getallNotes = async (res,data)=> {
     
     console.log(allposts[i]["_id"],allposts[i]["description"]);
     }
+    
+  //  window.location.reload();
   } catch (e) {
     console.error(e);
   }
@@ -134,10 +137,11 @@ function genFunc(c) {
     title: n_title,
     description: n_description
    })
-    alert("Clicked Save");
+    //alert("Clicked Save");
+    document.getElementById("notesomething").reset();
     // document.frm.reset();
-    document.querySelector('#new_title').value="";
-    document.querySelector('#new_description').value="";
+    //document.querySelector('#new_title').value="";
+    //document.querySelector('#new_description').value="";
      };
 
      
