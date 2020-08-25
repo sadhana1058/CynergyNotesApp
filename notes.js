@@ -13,8 +13,8 @@ const postsRoute = require("./RouteS/posts");
 notes.use("/posts", postsRoute);
 
 //connect to mongoDB
-const db_url = `mongodb+srv://${process.env.dbusername}:${process.env.dbpassword}@cluster0.4ijsz.gcp.mongodb.net/${process.env.dbName}?retryWrites=true&w=majority`;
-
+//const db_url = `mongodb+srv://${process.env.dbusername}:${process.env.dbpassword}@cluster0.4ijsz.gcp.mongodb.net/${process.env.dbName}?retryWrites=true&w=majority`;
+const db_url =`mongodb+srv://${process.env.dbusername}:${process.env.dbpassword}@cluster0.4ijsz.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority`;
 mongoose.connect(
   db_url,
   {
