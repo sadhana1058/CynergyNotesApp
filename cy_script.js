@@ -27,7 +27,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-const BASE_URL = 'http://localhost:3000/posts';
+const BASE_URL ='https://notes-web-app-by-sadhana.herokuapp.com/posts';
 //const allnotes = res.data;
 
 
